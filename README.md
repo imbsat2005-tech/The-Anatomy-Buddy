@@ -64,10 +64,9 @@ as a brief, polite note explaining why.## Tools, services, and models used
 - **Version control:** Git + GitHub
 
 ## Screenshots
-
-1. Home screen before drawing a card (empty state)
-2. A generated question card
-3. Answer, explanation, and mnemonic revealed
+![Empty state](empty-state.png)
+![Question](question.png)
+![Answer revealed](answer-revealed.png)
 
 <!-- If you add screenshot image files to the repo, replace this list with:
 ![Empty state](screenshots/1-empty-state.png)
