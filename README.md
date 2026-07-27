@@ -64,9 +64,9 @@ as a brief, polite note explaining why.## Tools, services, and models used
 - **Version control:** Git + GitHub
 
 ## Screenshots
-![Empty state](empty-state.png)
-![Question](question.png)
-![Answer revealed](answer-revealed.png)
+![Empty state](1.jpg)
+![Question](2.jpg)
+![Answer revealed](3.jpg)
 
 <!-- If you add screenshot image files to the repo, replace this list with:
 ![Empty state](screenshots/1-empty-state.png)
