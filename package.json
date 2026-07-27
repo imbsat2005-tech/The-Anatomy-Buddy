@@ -1,0 +1,9 @@
+{
+  "name": "anatomy-buddy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AI-powered anatomy flashcards for medical students, with adaptive explanations and mnemonics.",
+  "scripts": {
+    "dev": "vercel dev"
+  }
+}
