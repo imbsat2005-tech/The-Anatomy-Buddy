@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnatomyBuddy — AI Flashcards for Med Students</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page">
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <span class="eyebrow">Specimen-Style Study Cards</span>
+        <h1>AnatomyBuddy</h1>
+        <p class="tagline">Recall it. Miss it. Understand <em>why</em>. Built for med students who need more than a flashcard.</p>
+      </div>
+    </header>
+
+    <main class="content">
+
+      <section class="control-panel">
+        <label for="topic-input">Topic</label>
+        <div class="input-row">
+          <input
+            id="topic-input"
+            type="text"
+            placeholder="e.g. cranial nerves, brachial plexus, cardiac chambers"
+            autocomplete="off"
+          />
+          <button id="new-card-btn" class="btn-primary">Draw a card</button>
+        </div>
+        <p class="hint">Type any anatomy topic. Each card is generated fresh — no repeats, no fixed deck.</p>
+      </section>
+
+      <section class="score-strip" id="score-strip" hidden>
+        <div class="score-item">
+          <span class="score-num" id="score-right">0</span>
+          <span class="score-label">Recalled</span>
+        </div>
+        <div class="score-divider"></div>
+        <div class="score-item">
+          <span class="score-num" id="score-wrong">0</span>
+          <span class="score-label">Missed</span>
+        </div>
+        <div class="score-divider"></div>
+        <div class="score-item">
+          <span class="score-num" id="score-total">0</span>
+          <span class="score-label">Total Cards</span>
+        </div>
+      </section>
+
+      <section class="stage" id="stage">
+        <div class="empty-state" id="empty-state">
+          <div class="plate-frame plate-empty">
+            <span class="plate-fig">FIG. —</span>
+            <p>Enter a topic above and draw your first card.</p>
+          </div>
+        </div>
+
+        <div class="loading-state" id="loading-state" hidden>
+          <div class="plate-frame plate-loading">
+            <span class="plate-fig">FIG. …</span>
+            <p class="pulse">Consulting the atlas…</p>
+          </div>
+        </div>
+
+        <div class="error-state" id="error-state" hidden>
+          <div class="plate-frame plate-error">
+            <span class="plate-fig">FIG. ✕</span>
+            <p id="error-message">Something went wrong.</p>
+            <button id="retry-btn" class="btn-secondary">Try again</button>
+          </div>
+        </div>
+
+        <div class="card-state" id="card-state" hidden>
+          <div class="plate-frame" id="plate-frame">
+            <span class="plate-fig" id="plate-fig">FIG. 1</span>
+
+            <div class="question-block">
+              <span class="block-label">Recall</span>
+              <p class="question-text" id="question-text"></p>
+            </div>
+
+            <div class="answer-block" id="answer-block" hidden>
+              <span class="block-label">Answer</span>
+              <p class="answer-text" id="answer-text"></p>
+
+              <span class="block-label">Explanation</span>
+              <p class="explanation-text" id="explanation-text"></p>
+
+              <span class="block-label">Memory Aid</span>
+              <p class="mnemonic-text" id="mnemonic-text"></p>
+            </div>
+          </div>
+
+          <div class="action-row" id="pre-reveal-actions">
+            <button id="reveal-btn" class="btn-primary">Reveal answer</button>
+          </div>
+
+          <div class="action-row" id="post-reveal-actions" hidden>
+            <button id="got-it-btn" class="btn-success">I recalled it</button>
+            <button id="missed-it-btn" class="btn-fail">I missed it</button>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>AnatomyBuddy — an AI study tool. Not a substitute for your course material or attending.</p>
+    </footer>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
